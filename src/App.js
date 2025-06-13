@@ -1,31 +1,17 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route
-} from 'react-router-dom'
-
-import Header from './components/Header'
-import ProfilePage from './pages/ProfilePage'
-import HomePage from './pages/HomePage'
-import OrdersPage from './pages/OrdersPage'
-import OrderDetailPage from './pages/OrderDetailPage'
-import ContactUsPage from './pages/ContactUsPage'
+import React from "react";
+import Sidebar from "./components/Sidebar";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <main className="bg-[#E4E4E4]">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/orders" element={<OrdersPage />} />
-          <Route path="/orders/:orderId" element={<OrderDetailPage />} />
-          <Route path="/contact" element={<ContactUsPage />} />
-        </Routes>
+    <div className="flex">
+      <Sidebar />
+      <main className="flex-1 p-4">
+        <AppRoutes />
       </main>
-    </Router>
-  )
+    </div>
+  );
 }
 
-export default App
+
+export default App;
