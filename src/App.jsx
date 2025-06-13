@@ -1,9 +1,10 @@
 
 import React from "react";
-import PaymentPage from "./PaymentPage";
+import MedicalCart from "./MedicalCart";
+import "./index.css";
 
 function App() {
-  return <PaymentPage />;
+  return <MedicalCart />;
 }
 
 export default App;
